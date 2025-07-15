@@ -1,10 +1,8 @@
 import { Outlet } from "react-router-dom";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
 import { Nav } from "@/components/layout/Nav";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { CurrencySwitcher } from "@/components/layout/CurrencySwitcher";
+import { BottomNav } from "@/components/layout/BottomNav";
 
 export function AppLayout() {
   return (
@@ -14,26 +12,7 @@ export function AppLayout() {
       </aside>
 
       <div className="flex flex-col lg:pl-[280px]">
-        <header className="sticky top-0 z-10 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button
-                variant="outline"
-                size="icon"
-                className="lg:hidden shrink-0 h-11 w-11"
-              >
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle navigation menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent
-              side="left"
-              className="p-0 w-[280px] bg-charcoal text-white border-r-0"
-            >
-              <Nav />
-            </SheetContent>
-          </Sheet>
-
+        <header className="sticky top-0 z-10 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 lg:border-none">
           <div className="flex-1">
             {/* Breadcrumbs or page title can go here */}
           </div>
@@ -44,12 +23,14 @@ export function AppLayout() {
           </div>
         </header>
 
-        <main className="flex-1 p-4 md:p-6">
+        <main className="flex-1 p-4 md:p-6 pb-20 lg:pb-6">
           <div className="max-w-6xl mx-auto">
             <Outlet />
           </div>
         </main>
       </div>
+      
+      <BottomNav />
     </div>
   );
 }

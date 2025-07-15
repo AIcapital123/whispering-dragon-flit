@@ -9,6 +9,7 @@ import { AppLayout } from "@/components/layout/AppLayout";
 import Templates from "@/pages/Templates";
 import Tools from "@/pages/Tools";
 import LegalQA from "@/pages/LegalQA";
+import Upload from "@/pages/Upload";
 import { SettingsLayout } from "@/components/layout/SettingsLayout";
 import Account from "@/pages/settings/Account";
 import Billing from "@/pages/settings/Billing";
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/templates" element={<Templates />} />
             <Route path="/tools" element={<Tools />} />
             <Route path="/legal-qa" element={<LegalQA />} />
+            <Route path="/upload" element={<Upload />} />
             
             <Route path="/settings" element={<SettingsLayout />}>
               <Route index element={<Navigate to="account" replace />} />

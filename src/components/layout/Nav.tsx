@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Building2, LayoutDashboard, Users, FileText, ClipboardList, Wrench, MessageCircleQuestion, Settings } from "lucide-react";
+import { Building2, LayoutDashboard, ClipboardList, Wrench, MessageCircleQuestion, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -7,8 +7,6 @@ const navItems = [
   { href: "/templates", label: "Templates", icon: ClipboardList },
   { href: "/tools", label: "Tools", icon: Wrench },
   { href: "/legal-qa", label: "Legal Q&A", icon: MessageCircleQuestion },
-  { href: "/listings", label: "Listings", icon: FileText },
-  { href: "/tenants", label: "Tenants", icon: Users },
   { href: "/settings/account", label: "Settings", icon: Settings },
 ];
 
@@ -34,7 +32,7 @@ export function Nav() {
               to={href}
               className={cn(
                 "flex items-center gap-3 rounded-lg px-3 py-3 text-sidebar-foreground transition-all hover:bg-sidebar-accent hover:text-thai-blue min-h-[44px]",
-                pathname.startsWith(href) && href !== "/" || pathname === href
+                (pathname.startsWith(href) && href !== "/") || pathname === href
                   ? "bg-sidebar-accent text-thai-blue"
                   : ""
               )}
