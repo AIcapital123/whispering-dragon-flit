@@ -1,9 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
-import { Building2, LayoutDashboard, Users, FileText } from "lucide-react";
+import { Building2, LayoutDashboard, Users, FileText, ClipboardList, Wrench } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/templates", label: "Templates", icon: ClipboardList },
+  { href: "/tools", label: "Tools", icon: Wrench },
   { href: "/listings", label: "Listings", icon: FileText },
   { href: "/tenants", label: "Tenants", icon: Users },
 ];

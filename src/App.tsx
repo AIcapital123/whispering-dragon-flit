@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { AppLayout } from "@/components/layout/AppLayout";
+import Templates from "./pages/Templates";
+import Tools from "./pages/Tools";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +20,8 @@ const App = () => (
         <Routes>
           <Route element={<AppLayout />}>
             <Route path="/" element={<Index />} />
+            <Route path="/templates" element={<Templates />} />
+            <Route path="/tools" element={<Tools />} />
             {/* ADD ALL CUSTOM ROUTES HERE */}
           </Route>
           <Route path="*" element={<NotFound />} />
