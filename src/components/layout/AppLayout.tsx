@@ -20,7 +20,7 @@ export function AppLayout() {
               <Button
                 variant="outline"
                 size="icon"
-                className="lg:hidden shrink-0"
+                className="lg:hidden shrink-0 h-11 w-11"
               >
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle navigation menu</span>

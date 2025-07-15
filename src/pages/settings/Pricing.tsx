@@ -49,7 +49,7 @@ const Pricing = () => {
         <p className="mt-2 text-lg text-muted-foreground">
           Choose the plan that's right for you.
         </p>
-        <div className="flex items-center justify-center space-x-2 mt-4">
+        <div className="flex items-center justify-center flex-wrap gap-2 mt-4">
           <Label htmlFor="billing-cycle">Monthly</Label>
           <Switch id="billing-cycle" />
           <Label htmlFor="billing-cycle">Annually (Save 20%)</Label>

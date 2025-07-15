@@ -101,6 +101,7 @@ export function ChatInterface() {
               onClick={handleSend}
             >
               <Send className="h-4 w-4" />
+              <span className="sr-only">Send message</span>
             </Button>
           </div>
         </div>
