@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import { AppLayout } from "@/components/layout/AppLayout";
 import Templates from "./pages/Templates";
 import Tools from "./pages/Tools";
+import LegalQA from "./pages/LegalQA";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/templates" element={<Templates />} />
             <Route path="/tools" element={<Tools />} />
+            <Route path="/legal-qa" element={<LegalQA />} />
             {/* ADD ALL CUSTOM ROUTES HERE */}
           </Route>
           <Route path="*" element={<NotFound />} />
